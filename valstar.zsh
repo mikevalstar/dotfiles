@@ -7,6 +7,9 @@ alias pn="pnpm"
 alias locchange="git diff --shortstat"
 alias zj="zellij"
 
+# git
+alias fcheckout="git branch | grep -v \"^\\*\" | fzf --height=20% --reverse --info=inline | xargs git checkout"
+
 # Neovim Helpers
 alias vim="nvim"
 alias nano="nvim"
