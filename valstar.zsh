@@ -10,6 +10,9 @@ alias zj="zellij"
 # git
 alias fcheckout="git branch | grep -v \"^\\*\" | fzf --height=20% --reverse --info=inline | xargs git checkout"
 
+# coding stuff
+alias resetnode="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+
 # Neovim Helpers
 alias vim="nvim"
 alias nano="nvim"
