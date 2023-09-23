@@ -21,3 +21,5 @@ alias nano="nvim"
 alias wt="wezterm"
 alias wtt="wezterm cli set-tab-title"
 
+# fzf helpers
+alias cdd="cd \$(fd --type d --strip-cwd-prefix --hidden --exclude .git | fzf)"
