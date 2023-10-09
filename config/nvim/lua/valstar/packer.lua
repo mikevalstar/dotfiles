@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
     use( 'theprimeagen/harpoon' )
     -- powerful undo comand thing
     use( 'mbbill/undotree' )
+    use( 'wuelnerdotexe/vim-astro' )
     -- git
     use( 'tpope/vim-fugitive' )
 
