@@ -27,6 +27,19 @@ const tools: cliTool[] = [
       ubuntu: () => $`sudo apt-get install fzf`,
     },
   },
+  // fd - better find
+  {
+    name: "fd",
+    description: "A simple, fast and user-friendly alternative to find",
+    findCommand: {
+      mac: () => $`which fd`,
+      ubuntu: () => $`which fd`,
+    },
+    installCommand: {
+      mac: () => $`brew install fd`,
+      ubuntu: () => $`sudo apt-get install fd-find`,
+    },
+  },
   // zoxide - better cd
   {
     name: "zoxide",

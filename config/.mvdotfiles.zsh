@@ -14,6 +14,15 @@ fi
 
 ### Aliases / configs
 
+# Quick helpful items
+alias c="clear"
+alias doit="sudo !!"
+alias genpass="openssl rand -base64 20"
+alias sha='shasum -a 256 '
+alias pn="pnpm"
+#alias vim="nvim"
+#alias lvim="NVIM_APPNAME=LazyVim nvim"
+
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always
 export EZA_CONFIG_DIR="$HOME/.config/eza"
