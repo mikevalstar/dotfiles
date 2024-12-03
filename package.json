@@ -1,0 +1,23 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "My dotfiles setup and managment",
+  "main": "setup.sh",
+  "type": "module",
+  "scripts": {
+    "setup": "bash setup.sh",
+    "init": "bun scripts/init.ts"
+  },
+  "keywords": [],
+  "author": "Mike valstar <mike@valstar.dev>",
+  "license": "unlicense",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "inquirer": "^12.1.0",
+    "ora": "^8.1.1",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "zx": "^8.2.4"
+  }
+}
