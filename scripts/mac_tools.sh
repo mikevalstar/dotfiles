@@ -11,6 +11,7 @@ fi
 if test ! $(which rustup); then
   echo "Installing Rust..."
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  source ~/.zshrc
 else
   echo "Rust Installed"
 fi

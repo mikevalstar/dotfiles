@@ -61,7 +61,6 @@ for (let tool of toolList) {
 
     if (all || q.toLocaleLowerCase() === "y") {
       let installCommand = tool.installCommand[platform];
-      console.info("installCommand", installCommand);
 
       const toolSpinner = ora(chalk.blue(`Installing ${tool.name}...`)).start();
 
@@ -139,7 +138,7 @@ console.info(chalk.blue("Checking .zshrc file for global include..."));
 
 let zshrcPath = `${os.homedir()}/.zshrc`;
 let includePath = `${os.homedir()}/.mvdotfiles.zsh`;
-const includeString = `[ -f ${includePath}] && source ${includePath}`;
+const includeString = `[ -f ${includePath} ] && source ${includePath}`;
 
 // read the file and check for the string
 let zshrcFile = await fs.readFile(zshrcPath, "utf8");

@@ -15,6 +15,14 @@ const linkedFiles: fileLink[] = [
       mac: `${os.homedir()}/.mvdotfiles.zsh`,
     },
   },
+  // ~/.config/eza
+  {
+    projectPath: "config/eza",
+    platformPath: {
+      ubuntu: `${os.homedir()}/.config/eza`,
+      mac: `${os.homedir()}/.config/eza`,
+    },
+  },
 ];
 
 export default linkedFiles;

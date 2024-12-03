@@ -54,6 +54,19 @@ const tools: cliTool[] = [
         $`curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh`,
     },
   },
+  // eza ls replacement with icons
+  {
+    name: "eza",
+    description: "A better ls command",
+    findCommand: {
+      mac: () => $`which eza`,
+      ubuntu: () => $`which eza`,
+    },
+    installCommand: {
+      mac: () => $`cargo install eza --locked`,
+      ubuntu: () => $`cargo install eza --locked`,
+    },
+  },
 ];
 
 export default tools;
