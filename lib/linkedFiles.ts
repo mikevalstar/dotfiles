@@ -81,9 +81,19 @@ const linkedFiles: fileLink[] = [
   // ~/.config/fd
   {
     projectPath: "config/fd",
+    directory: true,
     platformPath: {
       ubuntu: `${os.homedir()}/.config/fd`,
       mac: `${os.homedir()}/.config/fd`,
+    },
+  },
+  // ~/.config/tealdeer
+  {
+    projectPath: "config/tealdeer",
+    directory: true,
+    platformPath: {
+      ubuntu: `${os.homedir()}/.config/tealdeer`,
+      mac: `${os.homedir()}/.config/tealdeer`,
     },
   },
 ];

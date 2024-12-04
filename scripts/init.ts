@@ -31,11 +31,15 @@ if (!platform) {
 }
 
 // create log folder if it doesn't in the current directory
-console.info(chalk.blue("Checking log folder exists"));
+console.info(chalk.blue("\nChecking log folder exists"));
 await $`mkdir -p log`;
 
+// check for ~/.config folder or a bunch of stull will break
+console.info(chalk.blue("\nChecking ~/.config folder exists"));
+await $`mkdir -p ~/.config`;
+
 // Loop through and install tools
-console.info(chalk.blue("Checking installed tools..."));
+console.info(chalk.blue("\nChecking installed tools...\n"));
 
 let all = false;
 
@@ -72,7 +76,7 @@ for (let tool of toolList) {
 }
 
 // File linking
-console.info(chalk.blue("Checking linked files..."));
+console.info(chalk.blue("\nChecking linked files...\n"));
 
 for (let file of linkedFiles) {
   let platformPath = file.platformPath[platform];
@@ -137,7 +141,7 @@ for (let file of linkedFiles) {
 }
 
 // Include project in zshrc file
-console.info(chalk.blue("Checking .zshrc file for global include..."));
+console.info(chalk.blue("\nChecking .zshrc file for global include...\n"));
 
 let zshrcPath = `${os.homedir()}/.zshrc`;
 let includePath = `${os.homedir()}/.mvdotfiles.zsh`;
@@ -153,4 +157,4 @@ if (!zshrcFile.includes(includeString)) {
 }
 
 // Final thoughts
-console.info(chalk.green("run `source ~/.zshrc` to apply changes"));
+console.info(chalk.magenta("\nrun `source ~/.zshrc` to apply changes"));

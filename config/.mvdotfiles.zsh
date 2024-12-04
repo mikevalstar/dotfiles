@@ -27,6 +27,9 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=header,grid --line
 ## Terminal Alacritty
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
+## Random ENV Vars
+export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
+
 ### Aliases / configs
 
 # Quick helpful items

@@ -106,6 +106,32 @@ const tools: cliTool[] = [
       ubuntu: () => $`sudo apt-get install ripgrep`,
     },
   },
+  // sd - better sed
+  {
+    name: "sd",
+    description: "An intuitive find & replace CLI",
+    findCommand: {
+      mac: () => $`which sd`,
+      ubuntu: () => $`which sd`,
+    },
+    installCommand: {
+      mac: () => $`cargo install sd --locked`,
+      ubuntu: () => $`cargo install sd --locked`,
+    },
+  },
+  // tealdeer - tldr in rust
+  {
+    name: "tealdeer",
+    description: "A very fast implementation of tldr in Rust",
+    findCommand: {
+      mac: () => $`which tldr`,
+      ubuntu: () => $`which tldr`,
+    },
+    installCommand: {
+      mac: () => $`cargo install tealdeer --locked`,
+      ubuntu: () => $`cargo install tealdeer --locked`,
+    },
+  },
   // zellij - terminal multiplexer
   {
     name: "zellij",
@@ -130,6 +156,19 @@ const tools: cliTool[] = [
     installCommand: {
       mac: () => $`brew install neovim`,
       ubuntu: () => $`sudo apt-get install neovim`,
+    },
+  },
+  // bottom - better top
+  {
+    name: "bottom",
+    description: "A cross-platform graphical process/system monitor",
+    findCommand: {
+      mac: () => $`which btm`,
+      ubuntu: () => $`which btm`,
+    },
+    installCommand: {
+      mac: () => $`cargo install bottom --locked`,
+      ubuntu: () => $`cargo install bottom --locked`,
     },
   },
 ];
