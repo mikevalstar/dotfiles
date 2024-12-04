@@ -18,6 +18,7 @@ if [[ -x "$(command -v fzf)" ]]; then
 else
     echo "fzf not found, and not setup"
 fi
+export FZF_COMPLETION_TRIGGER='~~'
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"

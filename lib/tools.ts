@@ -93,6 +93,19 @@ const tools: cliTool[] = [
       ubuntu: () => $`sudo apt-get install bat`,
     },
   },
+  // ripgrep - better grep
+  {
+    name: "ripgrep",
+    description: "A search tool like grep and The Silver Searcher",
+    findCommand: {
+      mac: () => $`which rg`,
+      ubuntu: () => $`which rg`,
+    },
+    installCommand: {
+      mac: () => $`brew install ripgrep`,
+      ubuntu: () => $`sudo apt-get install ripgrep`,
+    },
+  },
   // zellij - terminal multiplexer
   {
     name: "zellij",
