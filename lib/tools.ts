@@ -80,6 +80,45 @@ const tools: cliTool[] = [
       ubuntu: () => $`cargo install eza --locked`,
     },
   },
+  // bat - better cat
+  {
+    name: "bat",
+    description: "A cat clone with wings",
+    findCommand: {
+      mac: () => $`which bat`,
+      ubuntu: () => $`which bat`,
+    },
+    installCommand: {
+      mac: () => $`brew install bat`,
+      ubuntu: () => $`sudo apt-get install bat`,
+    },
+  },
+  // zellij - terminal multiplexer
+  {
+    name: "zellij",
+    description: "A terminal multiplexer",
+    findCommand: {
+      mac: () => $`which zellij`,
+      ubuntu: () => $`which zellij`,
+    },
+    installCommand: {
+      mac: () => $`cargo install zellij --locked`,
+      ubuntu: () => $`cargo install zellij --locked`,
+    },
+  },
+  // neovim
+  {
+    name: "nvim",
+    description: "A better vim",
+    findCommand: {
+      mac: () => $`which nvim`,
+      ubuntu: () => $`which nvim`,
+    },
+    installCommand: {
+      mac: () => $`brew install neovim`,
+      ubuntu: () => $`sudo apt-get install neovim`,
+    },
+  },
 ];
 
 export default tools;

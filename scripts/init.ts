@@ -98,8 +98,11 @@ for (let file of linkedFiles) {
   } catch (error) {}
 
   // Linking will force overwrite if we get here
-  const linkIt = async () => {
+  const linkIt = async (remove?: boolean) => {
     try {
+      if (remove) {
+        await $`rm -rf ${platformPath}`;
+      }
       await $`ln -sfF ${projectPath} ${platformPath}`;
       console.info(
         chalk.green(`${file.projectPath} linked to ${platformPath}`)
@@ -116,13 +119,13 @@ for (let file of linkedFiles) {
     );
     const q = await question("Do you want to overwrite it? (Yes/No)");
     if (q.toLocaleLowerCase() === "y") {
-      await linkIt();
+      await linkIt(true);
     }
   } else if (exists && !linked) {
     console.warn(chalk.red(`${platformPath} already exists`));
     const q = await question("Do you want to overwrite it? (Yes/No)");
     if (q.toLocaleLowerCase() === "y") {
-      await linkIt();
+      await linkIt(true);
     }
   } else if (!exists) {
     await linkIt();
