@@ -171,6 +171,47 @@ const tools: cliTool[] = [
       ubuntu: () => $`cargo install bottom --locked`,
     },
   },
+  // tree - better ls
+  {
+    name: "tree",
+    description:
+      "A directory listing program displaying a depth indented list of files",
+    findCommand: {
+      mac: () => $`which tree`,
+      ubuntu: () => $`which tree`,
+    },
+    installCommand: {
+      mac: () => $`brew install tree`,
+      ubuntu: () => $`sudo apt-get install tree`,
+    },
+  },
+  // entr - run commands when files change
+  {
+    name: "entr",
+    description: "Run arbitrary commands when files change",
+    findCommand: {
+      mac: () => $`which entr`,
+      ubuntu: () => $`which entr`,
+    },
+    installCommand: {
+      mac: () => $`brew install entr`,
+      ubuntu: () => $`sudo apt-get install entr`,
+    },
+  },
+  // thefuck - correct previous command
+  {
+    name: "thefuck",
+    description: "Magnificent app which corrects your previous console command",
+    findCommand: {
+      mac: () => $`which thefuck`,
+      ubuntu: () => $`which thefuck`,
+    },
+    installCommand: {
+      mac: () => $`brew install thefuck`,
+      ubuntu: () =>
+        $`sudo apt install python3-dev python3-pip python3-setuptools; pip3 install thefuck --user`,
+    },
+  },
 ];
 
 export default tools;

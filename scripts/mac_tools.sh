@@ -7,6 +7,14 @@ else
   echo "Homebrew Installed"
 fi
 
+# git
+if test ! $(which git); then
+  echo "Installing Git..."
+  brew install git
+else
+  echo "Git Installed"
+fi
+
 # rust
 if test ! $(which rustup); then
   echo "Installing Rust..."
@@ -49,4 +57,12 @@ if test ! $(which zx); then
   npm install -g zx
 else
   echo "ZX Installed"
+fi
+
+## starship prompt - because it prompts the user to install
+if test ! $(which starship); then
+  echo "Installing Starship..."
+  curl -sS https://starship.rs/install.sh | sh
+else
+  echo "Starship Installed"
 fi

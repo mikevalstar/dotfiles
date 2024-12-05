@@ -1,3 +1,10 @@
+## Starship
+if [[ -x "$(command -v starship)" ]]; then
+    eval "$(starship init zsh)"
+else
+    echo "starship not found, and not setup"
+fi
+
 ## zoxide setup for better cd
 if [[ -x "$(command -v zoxide)" ]]; then
     eval "$(zoxide init --cmd cd zsh)"
@@ -18,11 +25,26 @@ if [[ -x "$(command -v fzf)" ]]; then
 else
     echo "fzf not found, and not setup"
 fi
+
+## FZF
+# $HOME 
 export FZF_COMPLETION_TRIGGER='~~'
-export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_DEFAULT_COMMAND="fd --hidden --follow . "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+export FZF_ALT_C_COMMAND="fd --hidden --follow -t d . "
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=header,grid --line-range :500 {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --follow . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow . "$1"
+}
 
 ## Terminal Alacritty
 fpath+=${ZDOTDIR:-~}/.zsh_functions
@@ -32,6 +54,20 @@ export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
 
 ### Aliases / configs
 
+cd_to_dir() {
+    local selected_dir
+    if [[ -z "$1" ]]; then
+        selected_dir=$(fd -t d . $HOME | fzf +m --height 50% --preview 'tree -C {}')
+    else
+        selected_dir=$(fd -t d . $HOME "$1" | fzf +m --height 50% --preview 'tree -C {}')
+    fi
+
+    if [[ -n "$selected_dir" ]]; then
+        # Change to the selected directory
+        cd "$selected_dir" || return 1
+    fi
+}
+
 # Quick helpful items
 alias c="clear"
 alias doit="sudo !!"
@@ -40,6 +76,7 @@ alias sha='shasum -a 256 '
 alias pn="pnpm"
 alias vim="nvim"
 alias lvim="NVIM_APPNAME=LazyVim nvim"
+alias cdd="cd_to_dir"
 
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always

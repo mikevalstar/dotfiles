@@ -16,6 +16,15 @@ const linkedFiles: fileLink[] = [
       mac: `${os.homedir()}/.mvdotfiles.zsh`,
     },
   },
+  // ~/.config/starship
+  {
+    projectPath: "config/starship/starship.toml",
+    directory: true,
+    platformPath: {
+      ubuntu: `${os.homedir()}/.config/starship.toml`,
+      mac: `${os.homedir()}/.config/starship.toml`,
+    },
+  },
   // ~/.config/eza
   {
     projectPath: "config/eza",
