@@ -31,8 +31,8 @@ fi
 export FZF_COMPLETION_TRIGGER='~~'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow . "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --hidden --follow -t d . "
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=header,grid --line-range :500 {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_ALT_C_COMMAND="fd --hidden --follow -t d . "
 
 # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
 # - The first argument to the function ($1) is the base path to start traversal
@@ -81,4 +81,4 @@ alias cdd="cd_to_dir"
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always
 export EZA_CONFIG_DIR="$HOME/.config/eza"
-alias ls="eza --long " 
+alias lss="eza --long " 
