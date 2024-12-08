@@ -105,6 +105,15 @@ const linkedFiles: fileLink[] = [
       mac: `${os.homedir()}/.config/tealdeer`,
     },
   },
+  // ~/.hammerspoon
+  {
+    projectPath: "config/hammerspoon",
+    directory: true,
+    platformPath: {
+      ubuntu: null,
+      mac: `${os.homedir()}/.hammerspoon`,
+    },
+  },
 ];
 
 export default linkedFiles;
