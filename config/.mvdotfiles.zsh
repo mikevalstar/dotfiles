@@ -68,6 +68,13 @@ cd_to_dir() {
     fi
 }
 
+### fix alacritty not in path 
+if [[ ! -x "$(command -v alacritty)" ]]; then
+    if [[ -d "/Applications/Alacritty.app/Contents/MacOS" ]]; then
+        export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
+    fi
+fi
+
 # Quick helpful items
 alias c="clear"
 alias doit="sudo !!"

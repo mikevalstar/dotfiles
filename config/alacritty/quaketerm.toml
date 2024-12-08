@@ -1,0 +1,18 @@
+[window]
+dimensions = { columns = 500, lines = 20 }
+title="Quake Terminal"
+dynamic_title = false
+
+position = { x = 1, y = -500 }
+padding.x = 10
+padding.y = 10
+
+opacity = 0.75
+blur = true
+
+decorations = "none"
+
+[keyboard]
+bindings = [
+  { key = "Return", mods = "Command", action = "ToggleSimpleFullscreen" }
+]
