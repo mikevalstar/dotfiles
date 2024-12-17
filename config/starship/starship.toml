@@ -14,8 +14,8 @@ command_timeout = 1000
 format =  '[$symbol$branch(:$remote_branch)]($style)'
 
 [aws]
+disabled = true
 format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
-disabled = false
 style = 'bold blue'
 symbol = " "
 
