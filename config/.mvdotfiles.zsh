@@ -89,3 +89,6 @@ alias cdd="cd_to_dir"
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 alias lss="eza --long " 
+
+## Some ENV things
+export EDITOR="nvim"
