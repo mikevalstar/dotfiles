@@ -114,6 +114,15 @@ const linkedFiles: fileLink[] = [
       mac: `${os.homedir()}/.hammerspoon`,
     },
   },
+  // ~/.config/ghostty
+  {
+    projectPath: "config/ghostty",
+    directory: true,
+    platformPath: {
+      ubuntu: `${os.homedir()}/.config/ghostty`,
+      mac: `${os.homedir()}/.config/ghostty`,
+    },
+  },
 ];
 
 export default linkedFiles;
