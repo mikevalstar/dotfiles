@@ -1,3 +1,4 @@
+-- NO LONGER USED - REPLACED BUY Ghostty Quick Terminal
 -- global task for the quake term
 local qtask = nil
 local home = os.getenv("HOME")
