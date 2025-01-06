@@ -75,6 +75,9 @@ if [[ ! -x "$(command -v alacritty)" ]]; then
     fi
 fi
 
+## BJourn
+export BJOURN_USAGE="0"
+
 # Quick helpful items
 alias c="clear"
 alias doit="sudo !!"
@@ -84,6 +87,7 @@ alias pn="pnpm"
 alias vim="nvim"
 alias lvim="NVIM_APPNAME=LazyVim nvim"
 alias cdd="cd_to_dir"
+alias bj="bjourn"
 
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always
