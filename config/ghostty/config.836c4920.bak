@@ -14,4 +14,3 @@ macos-titlebar-style = transparent
 ## Keybinds
 keybind = global:cmd+`=toggle_quick_terminal
 keybind = cmd+shift+,=reload_config
-keybind = shift+enter=text:\n
