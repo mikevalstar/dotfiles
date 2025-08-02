@@ -26,6 +26,9 @@ else
     echo "fzf not found, and not setup"
 fi
 
+## add scripts folder to the path
+export PATH="$PATH:$HOME/.scripts"
+
 ## FZF
 # $HOME 
 export FZF_COMPLETION_TRIGGER='~~'
@@ -88,6 +91,9 @@ alias vim="nvim"
 alias lvim="NVIM_APPNAME=LazyVim nvim"
 alias cdd="cd_to_dir"
 alias bj="bjourn"
+
+
+alias bjtoday=bjourn_replace_today.sh
 
 # Next level of an ls 
 # options :  --no-filesize --no-time --no-permissions --no-user --color=always --icons=always
