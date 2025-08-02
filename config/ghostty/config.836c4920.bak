@@ -1,0 +1,16 @@
+#background = 000000
+background-opacity = 0.9
+background-blur-radius = 15
+
+window-padding-x = 10
+window-padding-y = 10
+
+font-family = "FiraCode Nerd Font Mono"
+
+theme=catppuccin-mocha
+window-save-state = always
+macos-titlebar-style = transparent
+
+## Keybinds
+keybind = global:cmd+`=toggle_quick_terminal
+keybind = cmd+shift+,=reload_config
