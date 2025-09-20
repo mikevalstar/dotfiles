@@ -205,3 +205,11 @@ automatically-unhide-macos-hidden-apps = false
     if.app-name-regex-substring = '1password'
     check-further-callbacks = true
     run = 'layout floating'
+[[on-window-detected]]
+    if.app-name-regex-substring = 'music'
+    check-further-callbacks = true
+    run = 'layout floating'
+[[on-window-detected]]
+    if.app-name-regex-substring = 'finder'
+    check-further-callbacks = true
+    run = 'layout floating'
